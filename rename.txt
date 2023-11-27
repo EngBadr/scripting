@@ -1,0 +1,9 @@
+@ECHO OFF
+
+SET NEWNAME='':
+SET /P NEWNAME= Select a new PC name: 
+
+::Change PC Name
+wmic computersystem where name="%COMPUTERNAME%" call rename name=%NEWNAME%
+
+Echo Process Complete..
